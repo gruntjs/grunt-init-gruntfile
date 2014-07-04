@@ -40,21 +40,7 @@ module.exports = function(grunt) {
     },{% } %}
     jshint: {
       options: {
-        curly: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        unused: true,
-        boss: true,
-        eqnull: true,{% if (dom) { %}
-        browser: true,{% } %}
-        globals: {{% if (jquery) { %}
-          jQuery: true
-        {% } %}}
+        jshintrc: './.jshintrc'
       },
       gruntfile: {
         src: 'Gruntfile.js'
@@ -80,13 +66,6 @@ module.exports = function(grunt) {
       }
     }
   });
-
-  // These plugins provide necessary tasks.{% if (min_concat) { %}
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');{% } %}
-  grunt.loadNpmTasks('grunt-contrib-{%= test_task %}');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task.
   grunt.registerTask('default', ['jshint', '{%= test_task %}'{%= min_concat ? ", 'concat', 'uglify'" : "" %}]);
