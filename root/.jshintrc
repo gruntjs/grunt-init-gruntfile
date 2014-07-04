@@ -1,0 +1,19 @@
+{
+    "curly": true,
+    "eqeqeq": true,
+    "immed": true,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "sub": true,
+    "undef": true,
+    "unused": true,
+    "boss": true,
+    "globalstrict": true,
+    "node": true,
+    "eqnull": true,{% if (dom) { %}
+    "browser": true,{% } %}
+    "globals": {{% if (jquery) { %}
+      jQuery: true
+    {% } %}}
+}
