@@ -1,5 +1,9 @@
-/*global module:false*/
+'use strict';
+
 module.exports = function(grunt) {
+
+  // load grunt plugins
+  require('load-grunt-tasks')(grunt);
 
   // Project configuration.
   grunt.initConfig({{% if (min_concat) { %}
