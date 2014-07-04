@@ -9,6 +9,8 @@
     "undef": true,
     "unused": true,
     "boss": true,
+    "globalstrict": true,
+    "node": true,
     "eqnull": true,{% if (dom) { %}
     "browser": true,{% } %}
     "globals": {{% if (jquery) { %}
