@@ -54,7 +54,8 @@ module.exports = function(grunt) {
         browser: true,{% } %}
         globals: {{% if (jquery) { %}
           jQuery: true
-        {% } %}}
+        {% } %}},
+        reporterOutput: ""
       },
       gruntfile: {
         src: 'Gruntfile.js'
